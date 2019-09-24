@@ -12,7 +12,11 @@ const { User } = require('./models/user');
 const { auth } = require('./middleware/auth')
 
 app.use(bodyParser.json());
-app.use(cookieParser())
+app.use(cookieParser());
+
+app.get('/',(req,res)=>{
+    res.send("Welcome to my Heroku App");
+})
 
 app.post('/api/user',(req,res)=>{
     const user = new User({
