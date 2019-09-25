@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.get('/',(req,res)=>{
-    res.send("Welcome to my Heroku App");
+    res.send("Welcome to my Heroku App with CI/CD");
 })
 
 app.post('/api/user',(req,res)=>{
